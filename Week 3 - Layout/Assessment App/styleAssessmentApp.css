@@ -27,9 +27,10 @@ footer {
 }
 
 .dotsViewReport {
+	width: 20em;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: flex-start;
+	justify-content: space-around;
 }
 
 main {
@@ -67,10 +68,15 @@ main {
 .smallCard {
 	background-color: white;
 	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.5);
-	margin-right: 150px;
-	margin-left: 150px;
+	margin-right: 220px;
+	margin-left: 220px;
 	padding: 15px;
 }
+
+.cardQuizStart {
+	line-height: 70%;
+}
+
 
 .submitBtn {
 	border: solid;
@@ -95,6 +101,15 @@ main {
 	border-color: #50A7F2;
 }
 
+.startQuiz {
+	background-color: #D3D3D3;
+	color: grey;
+	border-color: #D3D3D3;
+	border-radius: 5px;
+	margin-left: 220px;
+	margin-top: 15px;
+}
+
 a{
 	color: #1B25F2;
 }
@@ -112,8 +127,16 @@ a{
 		margin-left: 60px;
 	}
 
+	.startQuiz {
+		margin-left: 60px;
+	}
+
 @media all and (max-width: 600px) {
 	.smallCard {
 		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	.startQuiz {
 		margin-left: 30px;
 	}
