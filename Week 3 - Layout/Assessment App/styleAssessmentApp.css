@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+body {
+	background-color: #F8F8F8;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+header, footer {
+	background-color: white;
+	height: 60px;
+	position: fixed; 
+	left: 0;
+	right: 0;
+}
+
+header {
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer {
+	bottom: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.dotsViewReport {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+
+main {
+	margin-top: 75px;
+}
+
+.correct{
+	background-color:#CFF2CE;
+}
+
+.incorrect{
+	background-color:#F2CAD0;
+}
+
+.highlight {
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.unfinished {
+	background-color: white;
+	border: 0.5px solid;
+}
+
+.wideCard {
+	background-color: white;
+	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.5);
+	padding-bottom: 8px;
+}
+
+.wideCard, .language, header {
+	padding-left: 15px;
+}
+
+.smallCard {
+	background-color: white;
+	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.5);
+	margin-right: 150px;
+	margin-left: 150px;
+	padding: 15px;
+}
+
+.submitBtn {
+	border: solid;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+.endPractice {
+	background-color: white;
+	color: #50A7F2;
+	border-color: #50A7F2;
+}
+
+.checkAnswer {
+	background-color: #50A7F2;
+	color: white;
+	border-color: #50A7F2;
+}
+
+a{
+	color: #1B25F2;
+}
+
+.dots {
+	height: 25px;
+	width: 25px;
+	border-radius: 25px;
+	border: 0.5px solid grey;
+}
+
+@media all and (max-width: 1000px) {
+	.smallCard {
+		margin-right: 60px;
+		margin-left: 60px;
+	}
+
+@media all and (max-width: 600px) {
+	.smallCard {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
