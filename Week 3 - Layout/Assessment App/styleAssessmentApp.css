@@ -121,6 +121,22 @@ a{
 	border: 0.5px solid grey;
 }
 
+.formLogInText {
+	font-size: 1.1em; 
+	color: grey; 
+}
+
+.formLogIn {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	line-height: 10px;
+	margin-top: 40px;
+}
+
+
 @media all and (max-width: 1000px) {
 	.smallCard {
 		margin-right: 60px;

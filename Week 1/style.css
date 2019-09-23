@@ -1,3 +1,22 @@
-.answer{
-	color:green;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+body {
+	background-color: #C8CCCA;
+	font-family: 'Noto Sans KR', sans-serif;
 }
+.correct{
+	background-color:#ACFFC3;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.incorrect{
+	background-color:#FFB3B3;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.card {
+	background-color: white;
+	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.5);
+}
+
