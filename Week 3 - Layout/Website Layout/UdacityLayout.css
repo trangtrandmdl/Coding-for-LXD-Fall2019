@@ -1,0 +1,68 @@
+
+body{
+	margin: 0;
+	--global-padding: 16px;
+}
+nav {
+	float: left;
+	width: 16%;
+	height: 661px;
+	margin-top: 0;
+	background-color: #1f2932;
+	color: #dae1e7;
+	padding: var(--global-padding);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+header {
+	background-color: #ffffff;
+	line-height: 3em;
+	padding-left: 40px;
+	height: 50px;
+}
+
+main {
+	background-color: #d9dadc;
+	width: 79%;
+	height: 645px;
+	border-color: #aaaaaa;
+	padding-left: 35px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+h2, h3 {
+	font-weight: lighter;
+	margin-top: 0px;
+}
+
+#logo {
+	height: 70px;
+}
+
+#homeHeader {
+	margin-left: 250px;
+}
+
+#mainTop {
+	margin-top: 20px;
+}
+
+#help {
+	float: left;
+	line-height: 80px;
+	margin-top: 0;
+}
+
+#report{
+	clear: right;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 0;
+	line-height: 80px;
+}
+

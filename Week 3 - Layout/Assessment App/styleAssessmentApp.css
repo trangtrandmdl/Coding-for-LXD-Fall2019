@@ -31,6 +31,8 @@ footer {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
+	align-items: center;
+	margin-left: 20px;
 }
 
 main {
