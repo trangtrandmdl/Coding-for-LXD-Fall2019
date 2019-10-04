@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenge Week 5</title>
+</head>
+<body>
+	<div id="returnHere"></div>
+	
+	<script type="text/javascript">
+		//add dates into variables
+		let birth = 1990;
+		let future = 2050;
+
+		//do some math and store in a variable
+		let age = future - birth;
+
+		//locate the div with the id of returnHere and store in a variable
+		let ans = document.querySelector("#returnHere");
+
+		//concatinate the string with the new variables inside the HTML div that you just created a variable for.
+		ans.innerHTML = "I will be " + age + " in " + future;
+
+	</script>
+</body>
+</html>
