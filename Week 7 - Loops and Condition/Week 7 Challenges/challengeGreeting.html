@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let today = new Date();
+		console.log(today.getHours());
+
+		/* Use conditions such as `myVariable < 3` or `myVariable > 3` to to print out "Good morning!", "Good afternoon!",  or "Good evening!" based on the time that gets return from `getHour`.
+
+		Here are the time scales.
+			- Good morning: 5am-11am
+			- Good afternoon: 12pm-5pm (17hr)
+			- Good evening: 6pm (18hr) - 4am */
+
+		let greeting = "";
+		let time = today.getHours();
+		if (time>=5 && time<12) {
+			greeting = "Good morning!";
+		} else if (time>=12 && time<18){
+			greeting = "Good afternoon!";
+		} else {
+			greeting = "Good evening!";
+		}
+
+		console.log(greeting);
+	</script>
+</body>
+</html>
