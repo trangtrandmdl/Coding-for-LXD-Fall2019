@@ -1,0 +1,149 @@
+
+/*Global Variable*/
+:root {
+  --main-border-radius: 4px;
+  --main-border-style : .5px solid rgba(0,0,0,0.1);
+  --main-header-height : 60px;
+  --main-padding : 20px;
+  --main-box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.1);
+  --color-primary: #4990e6;
+}
+
+/*Main areas*/
+html{
+	font-size: 22px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: #F8F8F8;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #080808;
+	padding: 0;
+	margin:0;	
+}
+
+header, footer {
+	background-color: #ffffff;
+	border-bottom: var(--main-border-style);
+	position: fixed;
+	right: 0;
+	left: 0;
+	padding: 10px 20px;
+}
+
+header {
+	top:0;
+	z-index: 999;
+}
+
+main {
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+	margin: calc(var(--main-header-height) + 20px) 20px 20px 20px;
+}
+
+footer {
+	z-index: 998;
+	bottom:0;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*header styles*/
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
+
+header h1 {
+	font-size: 1.5em;
+}
+
+/*use this for list rules*/
+hr {
+	border: var(--main-border-style);
+}
+
+/*card*/
+.card {
+	background-color: #ffffff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: var(--main-border-radius, 4px);
+	box-shadow: var(--main-box-shadow);
+	/*max-width: 700px;*/
+}
+
+.card h2{
+	margin-top: 0;
+}
+
+/*button*/
+button {
+	padding: 10px 20px;
+	font-size: .9em;
+	border:0;
+	background-color: var(--color-primary);
+	border-radius: 4px;
+	color: #ffffff;
+	border: solid 2px #ffffff ;
+}
+
+button.secondary {
+	background-color: #ffffff;
+	border: solid 2px var(--color-primary) ;
+	color: var(--color-primary);
+}
+
+button[disabled] {
+	background-color: #DDDDDD;
+	border:none;
+	color: #999999;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	
+	html {
+		font-size: 18px;
+	}
+
+	main {
+		margin: calc(var(--main-header-height) + 20px) 0px 20px 0px;
+	}
+} 
+
+/*status colors for buttons*/
+.correct{
+	background-color: #cbf2cd;
+}
+
+.incorrect{
+	background-color: #f2cbd0;
+}
+
+.feedback {
+	background-color: #cbe2f2;
+}
+
+/*show and hide*/
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+/*off screen for screen reader*/
+.sr{
+	position: absolute;
+	left: -1000px;
+}
+
+
+

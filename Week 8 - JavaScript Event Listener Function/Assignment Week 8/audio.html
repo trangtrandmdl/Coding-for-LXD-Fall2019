@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<audio id="audioPlayer" width="500" controls>
+		<source id="mpeg_src" type="audio/mpeg">
+		<source id="ogg_src" type="audio/ogg">
+	Your browser does not support the audio tag.
+	</audio>
+	<div>
+		<select id="audioSelector">
+		</select>
+
+		<!-- buttons -->
+		<button id="audioLoad_btn">load</button>
+		<button id="audioPlay_btn">play</button>
+		<button id="audioPause_btn">pause</button>
+		<span id="timestamp"></span>
+	</div>
+
+	<div>
+		<input type="range" min="0" max="100" value="50" id="volumeRange">
+	</div>
+
+	<script type="text/javascript">
+
+		//Create am array of data object that stores the name of a track//
+		let music = [
+			{
+			title: "Creative Minds",
+			file: "tracks/creativeminds.mp3"
+			},
+			{
+			title: "Little Idea",
+			file: "tracks/littleidea.mp3"
+			},
+			{
+			title: "Memories",
+			file: "tracks/memories.mp3"
+			},
+			{
+			title: "Summer",
+			file: "tracks/summer.mp3"
+			}
+		]
+
+		//Loop the data array and create <option> for each item in the array via javascript. Make sure to use setAttribute() to create the value attribute and add the file location, and add the text inside of the option using innerHTML.//
+		for(let i=0; i<music.length; i++){
+			const audioSelector = document.querySelector("#audioSelector");
+			const option = document.createElement("option");
+			audioSelector.appendChild(option);
+			option.setAttribute("value", music[i].file);
+			option.innerHTML = music[i].title;
+		}
+
+		//store all UI in in variables	
+		const audioPlayer = document.querySelector("#audioPlayer");
+		const audioLoad_btn = document.querySelector("#audioLoad_btn");
+		const audioPlay_btn = document.querySelector("#audioPlay_btn");
+		const audioPause_btn = document.querySelector("#audioPause_btn");
+		const timestamp = document.querySelector("#timestamp");
+		const audioSelector = document.querySelector("#audioSelector");
+		// const volumeRange = document.querySelector("#volumeRange");
+
+
+		//load audio that is selected from the drop down
+		let loadAudio = () => {
+			document.querySelector("#mpeg_src").src = audioSelector.value;
+			audioPlayer.load();
+		}
+		//function to play audio
+		let playAudio = () => {
+			audioPlayer.play();
+		}
+
+		//function to pause audio
+		let pauseAudio = () => {
+			audioPlayer.pause();
+		}
+
+		//function to get time from the audio player
+		let getTimestamp = (event) => {
+			timestamp.innerHTML = Math.round(event.target.currentTime);
+		}
+
+		//Add Event listeners too all the UI and point callbacks to functions
+
+		audioLoad_btn.addEventListener("click", loadAudio);
+		audioPlay_btn.addEventListener("click", playAudio);
+		audioPause_btn.addEventListener("click", pauseAudio);
+		audioPlayer.addEventListener("timeupdate", getTimestamp);
+
+		//A range slider for the volume
+		let volumeRange = document.querySelector("#volumeRange");
+		let updateVolume = (event2) => {
+			audioPlayer.volume = event2.target.value/100;
+		}
+		volumeRange.addEventListener("click", updateVolume);
+
+	</script>
+</body>
+</html>
