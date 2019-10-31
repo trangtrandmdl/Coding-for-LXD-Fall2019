@@ -94,8 +94,8 @@
 
 		//A range slider for the volume
 		let volumeRange = document.querySelector("#volumeRange");
-		let updateVolume = (event2) => {
-			audioPlayer.volume = event2.target.value/100;
+		let updateVolume = (event) => {
+			audioPlayer.volume = event.target.value/100;
 		}
 		volumeRange.addEventListener("click", updateVolume);
 
