@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1 id="weatherHeader"></h1>
+
+
+	<script type="text/javascript">
+
+
+		/***********
+		*
+		*	YOU WILL NEED TO GET YOUR OWN API KEYS AND ADD TO CODE 
+		*	FOR BOTH OPEN WEATHER AND GIPHY IN ORDER FOR THIS TO WORK.
+		*
+		*************/
+
+		//store h1 that we populate later
+		const weatherHeader = document.querySelector("#weatherHeader")
+
+		//create a function that converts Kelvin to Fahrenheit
+		//https://www.rapidtables.com/convert/temperature/kelvin-to-fahrenheit.html
+		function convertKelvinToFahrenheit(kelvin){
+			return Math.round(kelvin * 9/5 - 459.67);
+		}
+
+		//Weather
+		//Go to api.openweathermap.org and get your own API key, then add to end of the URL below
+		const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=07070,us&appid=ADD_YOUR_API_KEY_HERE';
+		//Use that URL to fetch the weather
+		fetch(weatherURL)
+			.then(res => res.json())
+			.then(data => {
+				
+				//Grab the discription of the weather and send that out to Giphy to search for a fun gif 
+				loadGiphy(data.weather[0].description);
+				//data return kelvin so send to our custom function that converts to fahrenheit
+				let fahrenheit = convertKelvinToFahrenheit(data.main.temp);
+				//insert temprature into h1 that already exists, create string
+				weatherHeader.innerHTML = `Today's temperature is ${fahrenheit}`;
+			});
+
+		//Giphy
+		//Go to https://api.giphy.com create an account and get an API Key. Add that key to the URL below.
+
+		function loadGiphy(searchValue){
+			//insert the weather discription into this URL so we could search Giphy by it
+			let giphyURL = `https://api.giphy.com/v1/gifs/search?q=weather ${searchValue}&limit=10&offset=0&rating=G&lang=en&api_key=ADD_YOUR_API_KEY_HERE`;
+			
+			fetch(giphyURL)
+			.then(res => res.json())
+			.then(data => {
+				console.log(data);
+				
+				//Since I added 'limit=10'on the URL above, the service will send me 10 images.
+				//I am selecting a random image of those using Math.random() * data.data.lenth.
+
+				let randomImage = Math.floor(Math.random() * data.data.length);
+				//add image as a background image
+				document.body.style = `background-image:url(${data.data[randomImage].images.original.url})`;
+			});
+		}
+
+	</script>
+
+
+</body>
+</html>

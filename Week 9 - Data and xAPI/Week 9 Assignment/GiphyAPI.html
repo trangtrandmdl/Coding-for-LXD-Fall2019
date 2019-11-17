@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="GiphyAPI.css">
+</head>
+<body>
+	<header>
+		<h1>Delicious Desserts</h1>
+	</header>
+	<main>
+		<img src="Delicious_Desserts.jpg" alt="Delicious Desserts">
+		<div id="gifs"></div>
+	</main>
+	<script type="text/javascript">
+		
+		const url= `http://api.giphy.com/v1/gifs/search?q=desserts&api_key=8ty78DCLDDbuVlJ9cNS97OpcMlkJr6sD&limit=4`;
+
+		fetch(url)
+			.then((response) => {
+				return response.json();
+			})
+			.then ((data) => {
+				dessertFunction(data);
+				console.log(data)
+			})
+
+		let dessertFunction = (data) => {
+			for(let i=0; i < data.data.length; i++){
+				const gifs = document.querySelector("#gifs");
+				const link = document.createElement("a");
+				gifs.appendChild(link);
+				link.setAttribute("href", data.data[i].url);
+				link.innerHTML = "View Dessert " + [i+1];
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
