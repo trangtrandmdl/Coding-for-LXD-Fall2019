@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RumorMonster</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2 id="title">RumorMonster 🐵 </h2>
+    <div class='point-box'>
+       Points: <span id="points">0</span>
+    </div>
+  </header>
+  <div class="slides">
+    <section id="slide1" class="slide">
+      <div class="content">
+          <img src="img/fakenews1.jpg" class="img-scene">
+          <p class="description">+300 points to begin the game</p>
+          <p>A milk tea company is having a problem...</p>
+      </div>
+      <div class="navigate">
+        <a href="#slide2">Next</a>
+      </div>
+    </section>
+    <section class="slide" id="slide2">
+      <div class="content">
+          <img src="img/fakenews2.jpg" class="img-scene">
+      </div>
+      <div class="navigate">
+        <a href="#slide1">Back</a>
+        <a href="#slide3">Next</a>
+      </div>
+    </section>
+    <section class="slide" id="slide3">
+      <div class="content">
+        <img src="img/fakenews3.jpg" class="img-scene">
+      </div>
+      <div class="navigate">
+        <a href="#slide2">Back</a>
+        <a href="#slide4">Next</a>
+      </div>
+    </section>
+
+    <section class="slide" id="slide4">
+      <div class="content">
+        <h1>Pick a story</h1>
+        <p>Pick a story to destroy Aloha Milk Tea</p>
+        <div class="mc-card">
+          <a id="cockroach-btn" href="#slide5" class="story-btn">A. Roaches are found in Aloha milk tea </a>
+          <a id="brain-damage-btn" href="#slide6" class="story-btn">B. Aloha milk tea may cause brain damage</a>
+          <a id="other-option-btn" href="#slide7" class="story-btn">C. Aloho milk tea is apparently really bad for you — Here's Why</a>  
+        </div>
+        
+      </div>
+      <div class="navigate">
+        <a href="#slide2">Back</a>
+        <a href="#slide4">Next</a>
+      </div>
+    </section>
+
+
+    <section class="slide" id="slide5">
+      <div class="content">
+        <img src="img/fakenews4.jpg" class="img-scene">
+        <p class="description">Great choice. Provoking and sensational news can attract viewers’ attention. You have gained 1000 points for this choice.</p>
+      </div>
+      <div class="navigate">
+        <a href="#slide8">Continue</a>
+      </div>
+    </section>
+
+    <section class="slide" id="slide6">
+      <div class="content">
+        <img src="img/fakenews5.jpg" class="img-scene">
+        <p class="description">Good choice. Provoking and sensational news can attract viewers’ attention. But be careful because this claim is harder to persuade your audience. They may want to see some scientific evidence. You have gained 500 points for this choice.</p>
+      </div>
+      <div class="navigate">
+        <a href="#slide8">Continue</a>
+      </div>
+    </section>
+    <section class="slide" id="slide7">
+      <div class="content">
+        <h1>Not catchy enough!</h1>
+        <p class="description">This headline is not catchy enough. Fake news is usually designed to be provoking and sensational so as to attract viewers’ attention. No points gained for this choice.</p>
+        <a id="try-again" href='#slide4'>Try again? (-100 points)</a>
+      </div>
+    </section>
+    <section class="slide" id="slide8">
+      <div class="content">
+        <h1>The story continues...(Under construction)</h1>
+        <a href="#start" id="restart-btn">Restart the game</a>
+      </div>
+  
+    </section>
+    <section id="start">
+      <div class="navigate">
+        <a href="#slide1" id="start-btn">Start</a>
+      </div>
+      
+    </section>
+  </div>
+
+<script type="text/javascript" src="./scripts.js"></script>
+</body></html>

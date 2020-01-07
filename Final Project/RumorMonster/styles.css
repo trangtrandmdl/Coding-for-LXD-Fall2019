@@ -1,0 +1,148 @@
+
+html {
+  /*box-sizing: border-box;*/
+  height: 100%; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  padding: 0; 
+  overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    height: 60px;
+    padding: 5px 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: #fff;
+    z-index: 10;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 100%;
+  position: absolute;
+}
+
+h1 {
+  font-size: 2.5em; }
+
+a {
+  color: #1572b6;
+  text-decoration: none;
+  transition: transform 300ms;
+  }
+  a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+     }
+
+
+
+.point-box {
+  border: solid 2px;
+  padding: inherit;
+  background-color: #b58c4a;
+  font-weight: bold;
+}
+
+
+.img-scene{
+    height: 60vh;
+  }
+
+
+.navigate {
+  font-size: 75%;
+  flex: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20vw;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+} 
+  
+.content {
+  width: 100%;
+  max-height: 90vh;
+  margin-bottom: 2em; 
+}
+
+.flex-cl {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-btn {
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 2px solid;
+  background: deepskybue;
+}
+
+.story:hover {
+  transform: scale(1.1);
+}
+
+.mc-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.description {
+  font-size: 0.8em;
+  font-style: italic;
+} 
+
+
+#start-btn{
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 115px;
+  height: 25px;
+  background: deepskyblue;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  }
+
+
+.slide {
+  display: none;
+}
+
+
+/* When a slide is "on target", hide the # start section*/
+.slide:target ~ #start {
+  display: none; }
+
+.hidden {
+  display: none;
+}
+
+.slide:target {
+    display: flex;
+    z-index: 2;
+}
+
